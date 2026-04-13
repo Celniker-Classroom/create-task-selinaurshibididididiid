@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+  <title>Flashcard App Wireframe</title>
+  <style>
+    .box {
+      border: 2px solid black;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
+
+<h1>Flashcard Study App</h1>
+
+<!-- Create Flashcards -->
+  <h2>Create New Flashcard Set</h2>
+  <input id="questionInput" placeholder="Enter question">
+    <input id="answerInput" placeholder="Enter answer">
+    <button id="addCardBtn">Add Flashcard</button>
+
+    <!--Flashcard Container-->
+    <div id="flashcardContainer"></div>
+
+<!-- Flashcard Display -->
+  <h2>Flashcard Display</h2>
+  <p>[ Question / Answer Appears Here ]</p>
+
+<!-- Timer -->
+  <h2>Timer</h2>
+  <p>[ Countdown: 10–20 seconds ]</p>
+
+<!-- Controls -->
+  <h2>Controls</h2>
+  <p>[ Shuffle Flashcards Button ]</p>
+  <p>[ Next Card Button ]</p>
+
+<!-- Progress Tracking -->
+  <h2>Progress Tracker</h2>
+  <p>[ Memorized ✅ ]</p>
+  <p>[ Not Memorized ❌ ]</p>
+
+<!-- Final Score -->
+  <h2>Final Score</h2>
+  <p>[ percentage memorized ]</p>
+  <p>[ percentage NOT memorized </p>
 
 </body>
 </html>

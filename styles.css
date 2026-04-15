@@ -1,1 +1,55 @@
-/* Add Global styles here */
+#flashcardContainer {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    margin: 30px auto;
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 150px;
+    height: 100px;
+
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: white; /* IMPORTANT: hides cards behind */
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+.front {
+    background-color: white;
+}
+
+.back {
+    transform: rotateY(180deg);
+}

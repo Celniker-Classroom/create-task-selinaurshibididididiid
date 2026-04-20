@@ -1,49 +1,18 @@
-<!--Detailed description: The project will be on flashcards which would help students memorize things faster and study more efficiently without wasting any paper/flashcards in real life. The main things I need to work on is the 
-    1. Ability for cards to shuffle (randomized order)
-    2. Track progress (store knowledge of what wasn't memorized and what was)
-    3. A score of how much the user memorized VS not memorized 
-    -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Flashcard App Wireframe</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Flashcard</title>
+    <script src="script.js" defer></script>
 </head>
-
 <body>
+    <h1>Flashcard set</h1>
 
-<h1>Flashcard Study App</h1>
+    <h2>Make flash</h2>
+    <input type="text" id="question" placeholder="Question">
+    <input type="text" id="answer" placeholder="Answer">
+    <button type="button" id="btn">Add</button>
 
-<!-- Create Flashcards -->
-  <h2>Create New Flashcard Set</h2>
-  <input id="questionInput" placeholder="Enter question">
-    <input id="answerInput" placeholder="Enter answer">
-    <button id="addCardBtn">Add Flashcard</button>
-
-    <!--Flashcard Container-->
-
-<!-- Flashcard Display -->
-  <h2>Flashcard Display</h2>
-
-      <div id="flashcardContainer"></div>
-
-
-<!-- Controls -->
-  <h2>Controls</h2>
-  <p>[ Shuffle Flashcards Button ]</p>
-  <p>[ Next Card Button ]</p>
-
-<!-- Progress Tracking -->
-  <h2>Progress Tracker</h2>
-  <p>[ Memorized ✅ ]</p>
-  <p>[ Not Memorized ❌ ]</p>
-
-<!-- Final Score -->
-  <h2>Final Score</h2>
-  <p>[ percentage memorized ]</p>
-  <p>[ percentage NOT memorized </p>
-
-<script src="script.js" defer></script>
-
+    <div id="flashcardDisplay"></div>
 </body>
 </html>

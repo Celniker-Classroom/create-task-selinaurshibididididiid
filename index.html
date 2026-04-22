@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <title>Flashcard</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Flashcard set</h1>
 
-    <h2>Make flash</h2>
+    <h2>Make flashcard</h2>
+
+    <div class="textbox">
+        <div class = "inputs">
     <input type="text" id="question" placeholder="Question">
-    <input type="text" id="answer" placeholder="Answer">
-    <button type="button" id="btn">Add</button>
+    <input type="text" id="answer"  placeholder="Answer">
+        </div>
+
+        <button type="button" id="btn">Add</button>
+    </div>
 
     <div id="flashcardDisplay"></div>
+
 </body>
 </html>

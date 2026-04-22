@@ -27,19 +27,16 @@ function addFlashcard(question, answer) {
     });
 }
 
-function displayFlashcards(cardList) {
-    display.innerHTML = "";
+function displayFlashcards(cardList) { display.innerHTML = "";
 
     // when no flashcards:
-    if (cardList.length === 0) {
-        display.innerHTML = "No flashcards to show";
-    } 
+    if (cardList.length === 0) { display.innerHTML = "No flashcards to show"; }
     // displays answer to its corresponding question
-    else {
-        for (var i = 0; i < cardList.length; i++) {
-            display.innerHTML +=
-                cardList[i].question + "<br>" +
-                cardList[i].answer + "<br><br>";
-        }
-    }
+    else { 
+        for (var i = 0; i < cardList.length; i++) { 
+            display.innerHTML += 
+                "<div class='question'>" + cardList[i].question + "</div>" +
+                "<div class='answer'>" + cardList[i].answer + "</div><br>";
+        } 
+    } 
 }

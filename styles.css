@@ -1,0 +1,75 @@
+html{
+    background-color: #D9F4FC;
+}
+h1{
+    background-color: #A1E3F7;
+    padding: 20px;
+    margin:0cm;
+    font-size: 45px;
+}
+#btn{
+    background-color:#FEFB99;
+    border-style: ridge;
+    border-color: lemonchiffon;
+    width: 50px;
+    height: 60px;
+    border-radius: 3px;
+}
+#btn:hover{
+    border-color: #BAEEE5;
+}
+
+.textbox {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#flashcardDisplay {
+    margin-top: 30px;
+}
+
+.question {
+    border: 1px solid black;
+    background-color: white;
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-wrap: break-word;
+    overflow-y: auto;
+
+    text-align: center;
+}
+
+.answer {
+    border: 1px solid black;
+    background-color: white;
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-wrap: break-word;
+    overflow-y: auto;
+
+    text-align: center;
+}
+

@@ -35,8 +35,21 @@ function displayFlashcards(cardList) { display.innerHTML = "";
     else { 
         for (var i = 0; i < cardList.length; i++) { 
             display.innerHTML += 
-                "<div class='question'>" + cardList[i].question + "</div>" +
-                "<div class='answer'>" + cardList[i].answer + "</div><br>";
+                "<div class='flip-card'>" +
+                    "<div class='flip-card-inner'>" +
+                        "<div class='flip-card-front'>" + cardList[i].question + "</div>" +
+                        "<div class='flip-card-back'>" + cardList[i].answer + "</div>" +
+                    "</div>" +
+                "</div><br>";
         } 
+
+        // To flip flashcard when clicked
+         var cards = document.querySelectorAll(".flip-card");
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("click", function () {
+                this.classList.toggle("is-flipped");
+            });
+        }
     } 
 }
+

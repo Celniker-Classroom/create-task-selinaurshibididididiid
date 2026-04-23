@@ -9,20 +9,23 @@ h1{
 }
 #btn{
     background-color:#FEFB99;
-    border-style: ridge;
-    border-color: lemonchiffon;
-    width: 50px;
-    height: 60px;
-    border-radius: 3px;
+    border-style: solid;
+    border-color:#FEFB99;
+    width: 60px;
+    height: auto;
+    border-radius: 5px;
+    font-size: 15px;
+    color:#282828;
 }
+
 #btn:hover{
-    border-color: #BAEEE5;
+    border-color: #F7EF99;
 }
 
 .textbox {
     display: flex;
-    align-items: stretch;
     gap: 10px;
+    justify-content: center;
 }
 
 .inputs {
@@ -31,37 +34,47 @@ h1{
     gap: 10px;
 }
 
+textarea {
+    width: 300px;
+    min-height: 20px;
+    resize: vertical;
+    border-color: #D3D3D3;
+}
+
 #flashcardDisplay {
     margin-top: 30px;
-}
-
-.question {
-    border: 1px solid black;
-    background-color: white;
-    width: 350px;
-    height: 200px;
-    padding: 30px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-
-    display: flex;
+    display: grid; 
     justify-content: center;
-    align-items: center;
-
-    overflow-wrap: break-word;
-    overflow-y: auto;
-
-    text-align: center;
 }
 
-.answer {
-    border: 1px solid black;
-    background-color: white;
-    width: 350px;
-    height: 200px;
-    padding: 30px;
-    border-radius: 5px;
+.flip-card {
+    width: 450px;
+    height: 300px;
+    perspective: 1000px;
     margin-bottom: 40px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.1);
 
     display: flex;
     justify-content: center;
@@ -69,7 +82,54 @@ h1{
 
     overflow-wrap: break-word;
     overflow-y: auto;
-
+    scrollbar-color: #D3D3D3 transparent;
     text-align: center;
+
+    backface-visibility: hidden;
 }
 
+.flip-card-front {
+    background-color: white;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateX(180deg);
+}
+
+.flipbtn {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.displayBtn button{
+    background-color: #FEFB99;
+    border-style: solid;
+    border-radius: 50%;
+    width: 35px;
+    height: 25px;
+    border-color:#FEFB99;
+}
+
+.displayBtn {
+    background-color: #BAEEE5;
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+
+.displayBtn button:hover{
+    border-color: #BAEEE5;
+}

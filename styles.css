@@ -4,15 +4,18 @@ html{
 h1{
     background-color: #A1E3F7;
     padding: 20px;
-    margin:0cm;
+    margin:0;
     font-size: 45px;
 }
+
+h1, h2 {
+    text-align: center;
+}
+
 #btn{
     background-color:#FEFB99;
-    border-style: solid;
-    border-color:#FEFB99;
+    border: 1px solid #FEFB99;
     width: 60px;
-    height: auto;
     border-radius: 5px;
     font-size: 15px;
     color:#282828;
@@ -43,15 +46,20 @@ textarea {
 
 #flashcardDisplay {
     margin-top: 30px;
-    display: grid; 
+    display: flex;
     justify-content: center;
+    position: relative;
+    width: 450px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .flip-card {
     width: 450px;
     height: 300px;
     perspective: 1000px;
-    margin-bottom: 40px;
+    position: absolute;
 }
 
 .flip-card-inner {
@@ -75,27 +83,24 @@ textarea {
     padding: 30px;
     box-sizing: border-box;
     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.1);
+    background-color: white;
+    color: black;
 
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+
 
     overflow-wrap: break-word;
     overflow-y: auto;
-    scrollbar-color: #D3D3D3 transparent;
+    scrollbar-color: #D3D3D3 
+    transparent;
     text-align: center;
 
     backface-visibility: hidden;
 }
 
-.flip-card-front {
-    background-color: white;
-    color: black;
-}
-
 .flip-card-back {
-    background-color: white;
-    color: black;
     transform: rotateX(180deg);
 }
 
@@ -108,11 +113,10 @@ textarea {
 
 .displayBtn button{
     background-color: #FEFB99;
-    border-style: solid;
+    border: 1px solid #FEFB99;
     border-radius: 50%;
     width: 35px;
     height: 25px;
-    border-color:#FEFB99;
 }
 
 .displayBtn {
@@ -125,7 +129,6 @@ textarea {
     display: flex;
     align-items: center;
 
-    grid-auto-flow: column;
     gap: 10px;
 }
 
@@ -133,3 +136,4 @@ textarea {
 .displayBtn button:hover{
     border-color: #BAEEE5;
 }
+

@@ -5,7 +5,7 @@ var inputQuestion = document.querySelector("#question");
 var inputAnswer = document.querySelector("#answer");
 var button = document.querySelector("#btn");
 var display = document.querySelector("#flashcardDisplay");
-
+var currentIndex = 0;
 
 button.addEventListener("click", function () {
     var question = inputQuestion.value;
@@ -33,15 +33,15 @@ function displayFlashcards(cardList) { display.innerHTML = "";
     if (cardList.length === 0) { display.innerHTML = "No flashcards to show"; }
     // displays answer to its corresponding question
     else { 
-        for (var i = 0; i < cardList.length; i++) { 
-            display.innerHTML += 
-                "<div class='flip-card'>" +
-                    "<div class='flip-card-inner'>" +
-                        "<div class='flip-card-front'>" + cardList[i].question + "</div>" +
-                        "<div class='flip-card-back'>" + cardList[i].answer + "</div>" +
-                    "</div>" +
-                "</div><br>";
-        } 
+    for (var i = 0; i < cardList.length; i++) { 
+    display.innerHTML += 
+    "<div class='flip-card' style='z-index:" + (i === currentIndex ? 100 : i) + "'>" +
+        "<div class='flip-card-inner'>" +
+            "<div class='flip-card-front'>" + cardList[i].question + "</div>" +
+            "<div class='flip-card-back'>" + cardList[i].answer + "</div>" +
+        "</div>" +
+    "</div>";
+}
 
         // To flip flashcard when clicked
          var cards = document.querySelectorAll(".flip-card");
@@ -52,4 +52,28 @@ function displayFlashcards(cardList) { display.innerHTML = "";
         }
     } 
 }
+
+function goLeft() {
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = flashcards.length - 1;
+    }
+
+    displayFlashcards(flashcards);
+}
+
+function goRight() {
+    currentIndex++;
+
+    if (currentIndex >= flashcards.length) {
+        currentIndex = 0;
+    }
+
+    displayFlashcards(flashcards);
+}
+
+document.querySelector("#flipLeft").addEventListener("click", goLeft);
+document.querySelector("#flipRight").addEventListener("click", goRight);
+
 
